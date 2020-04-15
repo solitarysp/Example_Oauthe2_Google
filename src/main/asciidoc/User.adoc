@@ -1,0 +1,127 @@
+
+== User API
+Các docs cho User API
+
+=== Get User By Id
+TÌm kiếm User bởi Id, case thành công
+
+==== Path Parameters
+include::{snippets}/api/users/get-by-id/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/api/users/get-by-id/response-fields.adoc[]
+
+==== Sample Request
+include::{snippets}/api/users/get-by-id/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/api/users/get-by-id/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/api/users/get-by-id/curl-request.adoc[]
+
+
+
+=== Get all User
+Lấy tất cả danh sách user
+
+==== Path Parameters
+include::{snippets}/api/users/get-all/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/api/users/get-all/response-fields.adoc[]
+
+==== Sample Request
+include::{snippets}/api/users/get-all/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/api/users/get-all/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/api/users/get-all/curl-request.adoc[]
+
+
+
+
+=== Get User get by id not found
+APi tìm kiếm user bởi id, nhưng không tìm thấy
+
+==== Path Parameters
+include::{snippets}/api/users/get-by-id-not-found/path-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/api/users/get-by-id-not-found/response-fields.adoc[]
+
+==== Sample Request
+include::{snippets}/api/users/get-by-id-not-found/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/api/users/get-by-id-not-found/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/api/users/get-by-id-not-found/curl-request.adoc[]
+
+
+
+=== Tạo mới một user
+API tạo mới một user
+
+==== Body Parameters
+include::{snippets}/api/users/new-user/request-fields.adoc[]
+
+==== Response Fields
+include::{snippets}/api/users/new-user/response-fields.adoc[]
+
+==== Sample Request
+include::{snippets}/api/users/new-user/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/api/users/new-user/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/api/users/new-user/curl-request.adoc[]
+
+
+=== Tạo mới một user trên param
+API tạo mới một user
+
+==== Parameters
+include::{snippets}/api/users/new-user-param/request-parameters.adoc[]
+
+==== Response Fields
+include::{snippets}/api/users/new-user-param/response-fields.adoc[]
+
+==== Sample Request
+include::{snippets}/api/users/new-user-param/http-request.adoc[]
+
+==== Sample Response
+include::{snippets}/api/users/new-user-param/http-response.adoc[]
+
+==== CURL sample
+include::{snippets}/api/users/new-user-param/curl-request.adoc[]
+
+==== các error code
+
+
+|===
+|Stt |Code |Mô tả
+
+|1
+|0
+|Thành công
+
+|2
+|1
+|Thất Bại
+
+|3
+|2
+|TimeOut
+|===
+
+
+==== Flow logic API
+- Bước 1 : Client gửi request kèm theo data lên server
+- Bước 2 : Server validate data từ lên, 2 trường *firstName* và *lastName* là bắt buộc
+- Bước 3 : Server tiến hành save vào DB
+- Bước 4 : kết thúc lồng và trả về kết quả cho client
