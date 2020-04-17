@@ -44,6 +44,7 @@ public class LoginGoogleController {
     public Map<String, String> login() {
         Map<String, String> url = new HashMap<>();
         url.put("Url login", "https://accounts.google.com/o/oauth2/v2/auth?client_id=601662646531-aaja6d30rsh2b6mt4nm7f2dovnm7pup0.apps.googleusercontent.com&scope=https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/user.phonenumbers.read https://www.googleapis.com/auth/user.organization.read&redirect_uri=http://localhost:8080/login/login_google&response_type=code");
+        url.put("Danh sách scopes", "https://developers.google.com/identity/protocols/oauth2/scopes");
         return url;
     }
 }
