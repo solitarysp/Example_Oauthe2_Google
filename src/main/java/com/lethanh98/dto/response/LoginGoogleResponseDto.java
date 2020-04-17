@@ -22,6 +22,8 @@ public class LoginGoogleResponseDto {
 
     @JsonProperty("id_token")
     private String idToken;
+    @JsonProperty("refresh_token")
+    private String refreshToken;
 
     private Map<String, String> url=new HashMap<>();
 }
